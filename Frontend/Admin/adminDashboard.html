@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Muthu Corp.</title>
+    <link rel="icon" type="image/png" href="../assests/logo_1.png" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="adminDashboard.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo"></div>
+      <div class="icons">
+        <button title="Home" onclick="redirect('home')">
+          <i data-lucide="home" id="home"></i>
+        </button>
+        <i
+          data-lucide="user"
+          id="addUser"
+          title="add user"
+          onclick="redirect('user')"
+        ></i>
+        <i
+          data-lucide="receipt"
+          id="receipt"
+          title="reimbursements"
+          onclick="redirect('reimbursements')"
+        ></i>
+      </div>
+      <div class="sidebar-footer">
+        <div class="profile"></div>
+        <button id="signout-btn" title="logout" onclick="logout()">
+          <i data-lucide="log-out" id="logout"></i>
+        </button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <div class="primary-analytics">
+        <div class="kpi-cards" id="total"></div>
+        <div class="kpi-cards" id="approved"></div>
+        <div class="kpi-cards" id="pending"></div>
+        <div class="kpi-cards" id="rejected"></div>
+      </div>
+      <div class="secondary-analytics">
+        <div id="bar-container">
+          <canvas id="reimbursementChart"></canvas>
+        </div>
+        <div id="pie-container">
+          <canvas id="piechart"></canvas>
+        </div>
+      </div>
+      <div class="tertiary-analytics">
+        <div id="tertiary-1">
+          <canvas id="linechart"></canvas>
+        </div>
+        <div id="tertiary-2">
+          <div id="timer">00:00:00</div>
+          <span id="day"></span>
+          <span id="quotes"></span>
+        </div>
+        <div id="tertiary-3"></div>
+      </div>
+    </main>
+
+    <!-- SCRIPT -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./adminDashboard.js"></script>
+  </body>
+</html>

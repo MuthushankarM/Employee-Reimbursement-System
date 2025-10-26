@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assests/logo_1.png" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="image-container">
+      <button id="visit-site">visit Muthu Corp.</button>
+    </div>
+    <div class="field-container">
+      <div class="header">
+        <h1>Start your journey with</h1>
+        <img
+          id="logo"
+          src="./assests/light_theme_logo.png"
+          alt="muthu corp. logo"
+        />
+      </div>
+
+      <!-- BODY -->
+      <div class="login-body">
+        <input type="email" id="emailid" placeholder="email" />
+        <input type="password" id="password" placeholder="password" />
+
+        <p>forget password <a href="#">contact admin</a> ?</p>
+      </div>
+      <button id="signin" onclick="handleLogin()">Sign in</button>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>

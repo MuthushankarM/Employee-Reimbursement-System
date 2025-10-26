@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assests/logo_1.png" />
+    <title>Employee dashboard</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./employeeDashboard.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo"></div>
+      <div class="icons">
+        <button title="Home" onclick="redirect('home')">
+          <i data-lucide="home" id="home"></i>
+        </button>
+        <button title="Reimbursements" onclick="redirect('reimbursements')">
+          <i data-lucide="receipt" id="receipt" title="reimbursements"></i>
+        </button>
+      </div>
+      <div class="sidebar-footer">
+        <div class="profile"></div>
+        <button id="signout-btn" title="logout" onclick="logout()">
+          <i data-lucide="log-out" id="logout"></i>
+        </button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <h1>Happy to see you here !</h1>
+      <div class="actions-container">
+        <div class="claim-action" onclick="requestForm()">
+          Claim Reimbursements
+        </div>
+        <div class="track-action" onclick="track()">Track Reimbursements</div>
+      </div>
+    </main>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./employeeDashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+/* ---------------------------------------------------------
+   🌐 Modern Normalize CSS (2025)
+   Purpose: Make built-in browser styles consistent across modern browsers
+   Updated & Simplified from normalize.css + modern-normalize
+--------------------------------------------------------- */
+
+/* 1️⃣ Base defaults */
+html {
+  line-height: 1.15; /* Correct line height */
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling after rotation */
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* 2️⃣ Body defaults */
+body {
+  margin: 0;
+}
+
+/* 3️⃣ Render elements consistently */
+main {
+  display: block;
+}
+
+/* 4️⃣ Improve heading appearance consistency */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* 5️⃣ Reset hr appearance */
+hr {
+  height: 0;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid;
+}
+
+/* 6️⃣ Abbreviation styling */
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/* 7️⃣ Bold/strong normalization */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/* 8️⃣ Small element */
+small {
+  font-size: 80%;
+}
+
+/* 9️⃣ Sub/sup alignment fix */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+/* 🔟 Form elements */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+button {
+  text-transform: none;
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled {
+  cursor: default;
+}
+
+/* 11️⃣ Fix overflow in textareas */
+textarea {
+  overflow: auto;
+}
+
+/* 12️⃣ Adjust progress element */
+progress {
+  vertical-align: baseline;
+}
+
+/* 13️⃣ Remove search input decorations */
+[type="search"] {
+  /* -webkit-appearance: textfield; */
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* 14️⃣ File upload button consistency */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* 15️⃣ Image & media normalization */
+img,
+svg,
+video,
+canvas {
+  vertical-align: middle;
+}
+
+/* 16️⃣ Table layout consistency */
+table {
+  border-collapse: collapse;
+}
+
+/* 17️⃣ Remove default padding in lists */
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+/* 18️⃣ Hidden elements stay hidden */
+[hidden] {
+  display: none !important;
+}

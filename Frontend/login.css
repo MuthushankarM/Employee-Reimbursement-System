@@ -1,0 +1,164 @@
+:root {
+  /* =====================
+     PRIMARY COLORS
+     ===================== */
+  --color-primary: #1e88e5; /* Main blue */
+  --color-primary-light: #42a5f5; /* Hover / secondary accent */
+  --color-primary-dark: #1565c0; /* Active / pressed state */
+
+  /* =====================
+     BACKGROUNDS
+     ===================== */
+  --color-bg: #f8fafc; /* Page background */
+  --color-surface: #e3f2fd; /* Cards / sections / modals */
+
+  /* =====================
+     TEXT COLORS
+     ===================== */
+  --color-text-primary: #0f172a; /* Dark text */
+  --color-text-secondary: #475569; /* Secondary / muted text */
+  --color-text-inverse: #ffffff; /* White text for buttons or dark backgrounds */
+
+  /* =====================
+     ACCENT COLORS
+     ===================== */
+  --color-success: #10b981; /* Green - success */
+  --color-error: #ef4444; /* Red - errors / rejection */
+  --color-warning: #facc15; /* Yellow - warnings / alerts */
+  --color-info: #3b82f6; /* Light blue info highlight */
+
+  /* =====================
+     BORDERS & DIVIDERS
+     ===================== */
+  --color-border: #cbd5e1; /* Light gray-blue borders */
+
+  /* =====================
+     SHADOWS
+     ===================== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+
+  /* =====================
+     BORDER RADIUS
+     ===================== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+
+  grid-template-areas: "image login-fields";
+
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.image-container {
+  grid-area: image;
+  background-color: aqua;
+
+  background-image: url("./assests/back_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  padding: 1rem;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+#visit-site {
+  background-color: var(--color-text-primary);
+  height: 60px;
+  width: 200px;
+  padding: 0.2rem;
+  border-radius: 30px;
+  color: var(--color-primary);
+
+  font-weight: bold;
+
+  transition: background-color 0.3s ease;
+}
+
+#visit-site:hover {
+  background-color: var(--color-bg);
+
+  text-decoration: underline;
+}
+.field-container {
+  grid-area: login-fields;
+
+  padding: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+#logo {
+  height: 150px;
+  width: 500px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-body input {
+  height: 40px;
+  padding: 0.4rem 0.4rem 0.4rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid grey;
+  box-shadow: 0 4px 12px var(--shadow-lg);
+}
+
+.login-body input:focus {
+  border: 1px solid var(--color-primary);
+}
+
+#signin {
+  height: 56px;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--radius-sm);
+
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+}
+
+h1 {
+  margin: 0.2em 0;
+}
+
+p a {
+  text-decoration: none;
+}
+p a:hover {
+  text-decoration: underline;
+}
+
+p a:visited {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assests/logo_1.png" />
+    <link rel="stylesheet" href="./requestForm.css" />
+    <title>Request form</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo"></div>
+      <div class="icons">
+        <button title="Home" onclick="redirect('home')">
+          <i data-lucide="home" id="home"></i>
+        </button>
+        <button title="Reimbursements" onclick="redirect('reimbursements')">
+          <i data-lucide="receipt" id="receipt" title="reimbursements"></i>
+        </button>
+      </div>
+      <div class="sidebar-footer">
+        <div class="profile"></div>
+        <button id="signout-btn" title="logout" onclick="logout()">
+          <i data-lucide="log-out" id="logout"></i>
+        </button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <form action="#">
+        <h1 style="padding: 0">Claim Reimbursements</h1>
+        <div class="name-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="name" />
+          <textarea
+            name="purpose"
+            id="purpose"
+            placeholder="your purpose of visit"
+          ></textarea>
+        </div>
+
+        <div class="amount-fields">
+          <label for="amount">Amount</label>
+          <input type="text" id="amount" placeholder="amount in Rs." />
+        </div>
+        <div class="other-fields">
+          <label for="proof">Add proof</label>
+          <input type="file" />
+        </div>
+        <button id="submit">Sumbit</button>
+      </form>
+    </main>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./requestForm.js"></script>
+  </body>
+</html>

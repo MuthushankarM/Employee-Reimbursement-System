@@ -1,0 +1,323 @@
+:root {
+  /* =====================
+     PRIMARY COLORS
+     ===================== */
+  --color-primary: #1e88e5; /* Main blue */
+  --color-primary-light: #42a5f5; /* Hover / secondary accent */
+  --color-primary-dark: #1565c0; /* Active / pressed state */
+
+  /* =====================
+     BACKGROUNDS
+     ===================== */
+  --color-bg: #f8fafc; /* Page background */
+  --color-surface: #e3f2fd; /* Cards / sections / modals */
+
+  /* =====================
+     TEXT COLORS
+     ===================== */
+  --color-text-primary: #0f172a; /* Dark text */
+  --color-text-secondary: #475569; /* Secondary / muted text */
+  --color-text-inverse: #ffffff; /* White text for buttons or dark backgrounds */
+
+  /* =====================
+     ACCENT COLORS
+     ===================== */
+  --color-success: #10b981; /* Green - success */
+  --color-error: #ef4444; /* Red - errors / rejection */
+  --color-warning: #facc15; /* Yellow - warnings / alerts */
+  --color-info: #3b82f6; /* Light blue info highlight */
+
+  /* =====================
+     BORDERS & DIVIDERS
+     ===================== */
+  --color-border: #cbd5e1; /* Light gray-blue borders */
+
+  /* =====================
+     SHADOWS
+     ===================== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+
+  /* =====================
+     BORDER RADIUS
+     ===================== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+*,
+*::after,
+*::before,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-block-size: 100dvh;
+
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+
+  grid-template-areas: "sidebar main";
+}
+
+#addUser {
+  height: 32px;
+  width: 32px;
+  stroke: #cfcfcf;
+  transition: stroke 0.3s ease;
+  cursor: pointer;
+}
+
+#receipt,
+#home {
+  height: 32px;
+  width: 32px;
+  stroke: #cfcfcf;
+  transition: stroke 0.3s ease;
+  cursor: pointer;
+}
+#home {
+  stroke: var(--color-primary-light);
+}
+#logout {
+  height: 32px;
+  width: 32px;
+  stroke: #cfcfcf;
+  transition: stroke 0.3s ease;
+}
+#addUser:hover,
+#receipt:hover,
+#logout:hover {
+  stroke: var(--color-primary);
+  stroke: var(--color-primary-light);
+  transform: scale(1.1);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgb(37, 25, 53);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 2rem 0;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  background-image: url("../assests/logo_1.png");
+  background-size: contain;
+  margin-top: 1rem;
+}
+
+.profile {
+  height: 50px;
+  width: 50px;
+  border: 30px;
+  background-image: url("../assests/ms.png");
+  background-size: contain;
+  border-radius: var(--radius-lg);
+
+  cursor: pointer;
+}
+.icons {
+  /* height: 400px; */
+  width: 50px;
+  flex: 1;
+
+  padding: 2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.icons i {
+  background-color: white;
+}
+
+#signout-btn {
+  height: 40px;
+  width: 40px;
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  align-items: center;
+}
+
+.main-area {
+  grid-area: main;
+  height: 100%;
+  padding: 2rem;
+  padding-top: 4rem;
+
+  display: grid;
+  grid-template-rows: 2fr 5fr 3fr;
+  row-gap: 2rem;
+
+  grid-template-areas:
+    "primary"
+    "secondary"
+    "tertiary";
+  grid-auto-flow: row;
+}
+
+.dummy-analytics {
+  height: 200px;
+  background-color: black;
+}
+
+.primary-analytics {
+  grid-area: primary;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.secondary-analytics {
+  grid-area: secondary;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  grid-template-areas: "bar pie";
+
+  column-gap: 1rem;
+}
+
+#bar-container {
+  grid-area: bar;
+  border-radius: var(--radius-lg);
+}
+
+#pie-container {
+  grid-area: pie;
+  border-radius: var(--radius-lg);
+}
+
+#day {
+  color: rgba(255, 255, 255, 0.719);
+  font-size: 1.2rem;
+}
+
+#quotes {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.753);
+
+  margin-top: 2rem;
+  width: 500px;
+  text-align: right;
+}
+.tertiary-analytics {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 1rem;
+
+  grid-template-areas: "line unknown1 unknown2";
+}
+
+#tertiary-1 {
+  grid-area: line;
+  display: flex;
+  background-color: rgb(247, 247, 247);
+  justify-content: center;
+  align-items: center;
+
+  border-radius: var(--radius-lg);
+}
+#tertiary-2 {
+  grid-area: unknown1;
+  background-image: url("../assests/galaxy.jpg");
+  background-size: cover;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#timer {
+  color: rgba(245, 245, 220, 0.562);
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+#tertiary-3 {
+  grid-area: unknown2;
+  background-color: violet;
+}
+
+#monthlyTrendChart {
+  height: 100px;
+  width: auto;
+}
+
+.kpi-cards {
+  cursor: pointer;
+  border-radius: 10px;
+
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+#total {
+  background: linear-gradient(135deg, #5b21b6, #a855f7);
+  padding: 2rem;
+  color: white;
+  font-size: 1rem;
+}
+
+#total h1 {
+  margin: 10px 0 0 0;
+  font-size: 3rem;
+}
+
+#approved {
+  background: linear-gradient(135deg, #166534, #22c55e);
+  color: white;
+  padding: 2rem;
+  font-size: 1rem;
+}
+#approved h1 {
+  margin: 10px 0 0 0;
+  font-size: 3rem;
+}
+#pending {
+  background: linear-gradient(135deg, #92400e, #f59e0b);
+  padding: 2rem;
+  color: white;
+  font-size: 1rem;
+}
+#pending h1 {
+  margin: 10px 0 0 0;
+  font-size: 3rem;
+}
+
+#rejected {
+  background: linear-gradient(135deg, #b91d1d, #f87171);
+  padding: 2rem;
+  color: white;
+  font-size: 1rem;
+}
+#rejected h1 {
+  margin: 10px 0 0 0;
+  font-size: 3rem;
+}

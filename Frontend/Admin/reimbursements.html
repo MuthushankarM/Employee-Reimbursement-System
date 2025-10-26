@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reimbursements | Muthu Corp.</title>
+    <link rel="icon" type="image/png" href="../assests/logo_1.png" />
+    <link rel="stylesheet" href="./reimbursements.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo"></div>
+      <div class="icons">
+        <button title="Home" onclick="redirect('home')">
+          <i data-lucide="home" id="home"></i>
+        </button>
+        <i data-lucide="user" id="addUser" title="add user"></i>
+        <i data-lucide="receipt" id="receipt" title="reimbursements"></i>
+      </div>
+      <div class="sidebar-footer">
+        <div class="profile"></div>
+        <button id="signout-btn" title="logout" onclick="logout()">
+          <i data-lucide="log-out" id="logout"></i>
+        </button>
+      </div>
+    </aside>
+    <main class="main-area"></main>
+
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./reimbursements.js"></script>
+  </body>
+</html>

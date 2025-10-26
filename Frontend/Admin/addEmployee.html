@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Employee | Muthu Corp.</title>
+    <link rel="icon" type="image/png" href="../assests/logo_1.png" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="./addEmployee.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo"></div>
+      <div class="icons">
+        <button title="Home" onclick="redirect('home')">
+          <i data-lucide="home" id="home"></i>
+        </button>
+        <button title="users">
+          <i
+            data-lucide="user"
+            id="addUser"
+            title="add user"
+            onclick="redirect('adduser')"
+          ></i>
+        </button>
+        <button title="Reimbursements">
+          <i
+            data-lucide="receipt"
+            id="receipt"
+            title="reimbursements"
+            onclick="redirect('reimbursements')"
+          ></i>
+        </button>
+      </div>
+      <div class="sidebar-footer">
+        <div class="profile"></div>
+        <button id="signout-btn" title="logout" onclick="logout()">
+          <i data-lucide="log-out" id="logout"></i>
+        </button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <div class="wallpaper"></div>
+      <div class="add-container">
+        <div class="add-headers">
+          <!-- TITLE TEXT -->
+          <h1>Add Employee to</h1>
+          <div class="logo-field"></div>
+        </div>
+        <!-- FIELDS -->
+        <div class="add-fields">
+          <input type="text" id="EmployeeName" placeholder="name" />
+          <input type="text" id="Role" placeholder="role" />
+          <input type="text" id="emailId" placeholder="email" />
+          <input type="text" id="passwordField" placeholder="password" />
+          <button id="generate-password">generate password</button>
+        </div>
+        <button id="add-user" onclick="addUser()">Add user</button>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="./addEmployee.js"></script>
+  </body>
+</html>
