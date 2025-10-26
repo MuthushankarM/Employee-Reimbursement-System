@@ -1,16 +1,3 @@
-title: "Employee Reimbursement System"
-description: "A web-based Employee Reimbursement System where admins can manage users, view analytics, and approve/reject reimbursement requests, while employees can submit their claims."
-
-table_of_contents:
-  - Technologies
-  - Project Structure
-  - Getting Started
-  - Admin Credentials
-  - Admin Pages
-  - User Pages
-  - Entry Points
-  - Backend Architecture
-
 technologies:
   frontend: "HTML, CSS, JavaScript"
   backend: "Node.js (No framework)"
